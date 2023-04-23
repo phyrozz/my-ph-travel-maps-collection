@@ -19,6 +19,10 @@ svg {
   height: 97vh;
 }
 
+h4 {
+  margin: 1rem;
+}
+
 .municipality-layer {
   stroke: #000;
   stroke-miterlimit: 10;
@@ -40,7 +44,9 @@ svg {
 }
 
 .options-container h4 {
-  line-height: 0;
+  line-height: 1;
+  padding: 0 0.5rem;
+  width: 100%;
 }
 
 .options {
