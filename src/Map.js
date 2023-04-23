@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
 import "./font.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -45,20 +45,6 @@ const Map = (props) => {
         }
         
     };
-
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setShowOptions(false);
-            }
-        };
-    
-        document.addEventListener("click", handleClickOutside);
-    
-        return () => {
-          document.removeEventListener("click", handleClickOutside);
-        };
-    }, [dropdownRef]);
     
     const handleStatusChange = (e) => {
         const { value } = e.target;
