@@ -23,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "maps/cavite",
     element: <App map="cavite" />,
+  },
+  {
+    path: "maps/metro_manila",
+    element: <App map="metro_manila" />,
   }
 ]);
 

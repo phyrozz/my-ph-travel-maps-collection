@@ -14,6 +14,10 @@ const Home = () => {
         let path = "/maps/cavite";
         navigate(path);
     }
+    const metroManilaMap = () => {
+        let path = "/maps/metro_manila";
+        navigate(path);
+    }
 
     return (
         <div className="home-container">
@@ -23,6 +27,7 @@ const Home = () => {
             <div className="buttons">
                 <button id="about-btn" className="btn" onClick={lagunaMap}>Laguna</button>
                 <button id="save-btn" className="btn" onClick={caviteMap}>Cavite</button>
+                <button id="save-btn" className="btn" onClick={metroManilaMap}>Metro Manila</button>
                 <p>More maps coming soon!</p>
             </div>
         </div>

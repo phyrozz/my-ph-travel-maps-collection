@@ -48,6 +48,10 @@ const App = (props) => {
                 return (
                     <Map mapName="cavite" />
                 );
+            case "metro_manila":
+                return (
+                    <Map mapName="metro_manila" />
+                );
             default:
                 return (
                     <Map mapName="laguna" />

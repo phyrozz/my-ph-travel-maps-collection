@@ -3,8 +3,9 @@ import './App.css';
 import "./font.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import Laguna from './Laguna';
-import Cavite from './Cavite';
+import Laguna from './maps/Laguna';
+import Cavite from './maps/Cavite';
+import MetroManila from './maps/MetroManila';
 
 
 const Map = (props) => {
@@ -128,8 +129,20 @@ const Map = (props) => {
                     getMunicipalityColor={getMunicipalityColor}
                 />
                 );
+            case "metro_manila":
+                return (
+                    <MetroManila
+                    handleMouseMove={handleMouseMove}
+                    handleMunicipalityClick={handleMunicipalityClick}
+                    handleMunicipalityMouseEnter={handleMunicipalityMouseEnter}
+                    handleMunicipalityMouseLeave={handleMunicipalityMouseLeave}
+                    setShowOptions={setShowOptions}
+                    showOptions={showOptions}
+                    getMunicipalityColor={getMunicipalityColor}
+                />
+                );
             default:
-                break;
+                return null;
         }
     }
     
