@@ -41,6 +41,7 @@ h4 {
   border: 1px #000 solid;
   font-weight: 800;
   z-index: 1001;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .options-container h4 {
@@ -52,6 +53,8 @@ h4 {
 .options {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .options button {
@@ -60,7 +63,6 @@ h4 {
   background-color: inherit;
   padding: 0.3rem;
   text-align: left;
-  width: 175px;
   cursor: pointer;
 }
 
@@ -201,7 +203,7 @@ h4 {
 
 .btn {
   text-decoration: none;
-  color: black;
+  color: #000;
   background-color: white;
   padding: 0.5rem;
   border: 1px #000 solid;
@@ -231,16 +233,18 @@ table, th, td {
   border-collapse: collapse;
 }
 
-#return {
-  text-decoration: none;
-  color: #000;
-  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  font-size: 0.8rem;
+.etivac {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  border: none;
+  background-color: #9dc3fb;
+  color: #9dc3fb;
 }
 
-#return:hover {
-  color: #00235D;
-  text-decoration: underline;
+.etivac:hover {
+  border: #000 1px solid;
+  color: #000;
 }
 
 @media only screen and (max-width: 768px) {

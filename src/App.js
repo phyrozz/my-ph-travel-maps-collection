@@ -25,7 +25,7 @@ const App = (props) => {
             width: elemRect.height - 5,
             height: elemRect.height - 5,
             style: {
-                position: 'absolute', // position the level-container element over the SVG element
+                position: 'absolute',
                 top: '0',
                 left: '0',
             },
@@ -52,10 +52,16 @@ const App = (props) => {
                 return (
                     <Map mapName="metro_manila" />
                 );
-            default:
+            case "bulacan":
                 return (
-                    <Map mapName="laguna" />
+                    <Map mapName="bulacan" />
                 );
+            case "etivac":
+                return (
+                    <Map mapName="etivac" />
+                );
+            default:
+                return null;
         }
     }
 

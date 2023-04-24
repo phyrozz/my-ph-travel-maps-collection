@@ -1,11 +1,17 @@
 import React from "react";
 import "./font.css";
 import "./App.css";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
+
     return (
         <div className="about-container">
-            <a id="return" href="/">Return to Map</a>
+            <button className="btn" onClick={goBack}>Return to Map</button>
             <h2>What is this Map?</h2>
             <p>This map let's you show your travel status for the map you've selected. You can play around with the map by clicking on each city/municipality then choosing which travel status fits on that place.</p>
             <h2>What are these travel statuses?</h2>

@@ -14,8 +14,16 @@ const Home = () => {
         let path = "/maps/cavite";
         navigate(path);
     }
+    const etivacMap = () => {
+        let path = "/maps/etivac";
+        navigate(path);
+    }
     const metroManilaMap = () => {
         let path = "/maps/metro_manila";
+        navigate(path);
+    }
+    const bulacanMap = () => {
+        let path = "/maps/bulacan";
         navigate(path);
     }
 
@@ -25,9 +33,11 @@ const Home = () => {
                 <h1>Select a Map</h1>
             </div>
             <div className="buttons">
-                <button id="about-btn" className="btn" onClick={lagunaMap}>Laguna</button>
-                <button id="save-btn" className="btn" onClick={caviteMap}>Cavite</button>
-                <button id="save-btn" className="btn" onClick={metroManilaMap}>Metro Manila</button>
+                <button className="btn" onClick={metroManilaMap}>Metro Manila</button>
+                <button className="btn" onClick={lagunaMap}>Laguna</button>
+                <button className="btn" onClick={caviteMap}>Cavite</button>
+                <button className="btn" onClick={bulacanMap}>Bulacan</button>
+                <button className="btn etivac" onClick={etivacMap}>Etivac ;)</button>
                 <p>More maps coming soon!</p>
             </div>
         </div>

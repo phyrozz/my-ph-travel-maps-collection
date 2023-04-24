@@ -27,6 +27,14 @@ const router = createBrowserRouter([
   {
     path: "maps/metro_manila",
     element: <App map="metro_manila" />,
+  },
+  {
+    path: "maps/bulacan",
+    element: <App map="bulacan" />,
+  },
+  {
+    path: "maps/etivac",
+    element: <App map="etivac" />,
   }
 ]);
 
