@@ -45,9 +45,9 @@ h4 {
 }
 
 .options-container h4 {
-  line-height: 1;
+  line-height: 1.1;
   padding: 0 0.5rem;
-  width: 100%;
+  width: 100px;
 }
 
 .options {
@@ -265,6 +265,10 @@ table, th, td {
 
   .options-container {
     font-size: 16px;
+  }
+
+  .options-container h4 {
+    width: 125px;
   }
 
   .level-container {
