@@ -38,6 +38,10 @@ const App = (props) => {
         });
     };
 
+    const resetStatuses = () => {
+        window.location.reload();
+    }
+
     const chooseMap = (e) => {
         switch (e) {
             case "laguna":
@@ -56,6 +60,14 @@ const App = (props) => {
                 return (
                     <Map mapName="bulacan" />
                 );
+            case "rizal":
+                return (
+                    <Map mapName="rizal" />
+                );
+            case "cebu":
+                return (
+                    <Map mapName="cebu" />
+                );
             case "etivac":
                 return (
                     <Map mapName="etivac" />
@@ -72,6 +84,7 @@ const App = (props) => {
                 <button id="about-btn" className="btn" onClick={routeChange}>What's this?</button>
                 <button id="save-btn" className="btn" onClick={saveAsImage}>Save Map as Image</button>
                 <button className="btn" onClick={goToChooseMaps}>Choose a different map</button>
+                <button id="reset" className="btn" onClick={resetStatuses}>Reset Map</button>
             </div>
             <div className="donation">
                 <p>You can support this project by donating below. This will help maintain this website since there will be more maps to come!</p>

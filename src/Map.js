@@ -8,6 +8,8 @@ import Cavite from './maps/Cavite';
 import MetroManila from './maps/MetroManila';
 import Etivac from './maps/Etivac';
 import Bulacan from './maps/Bulacan';
+import Rizal from './maps/Rizal';
+import Cebu from './maps/Cebu';
 
 
 const Map = (props) => {
@@ -40,7 +42,7 @@ const Map = (props) => {
     const handleMunicipalityClick = (e) => {
         const bbox = e.target.getBBox();
         setHoveredMunicipality(null);
-        setDropdownCoords({ x: ((bbox.x / 2) / 2) + (window.innerWidth / 2) - 250, y: ((bbox.y / 2) / 1.5) + 100 });
+        setDropdownCoords({ x: ((bbox.x / 2) / 2) + (window.innerWidth / 2) - 350, y: ((bbox.y / 2) / 1.5) + 75 });
         const municipality = e.target.id;
         setSelectedMunicipality(municipality);
         if (!municipalities[municipality]) {
@@ -88,7 +90,7 @@ const Map = (props) => {
 
     const handleMouseMove = (e) => {
         const bbox = e.target.getBBox();
-        setTooltipCoords({ x: (bbox.x / 3) + (window.innerWidth / 2) - 300, y: ((bbox.y / 2) / 1.5) + 100 });
+        setTooltipCoords({ x: ((bbox.x / 2) / 2) + (window.innerWidth / 2) - 300, y: ((bbox.y / 2) / 1.5) + 100 });
     };
 
     const renderMap = (e) => {
@@ -132,6 +134,30 @@ const Map = (props) => {
             case "bulacan":
                 return (
                     <Bulacan
+                        handleMouseMove={handleMouseMove}
+                        handleMunicipalityClick={handleMunicipalityClick}
+                        handleMunicipalityMouseEnter={handleMunicipalityMouseEnter}
+                        handleMunicipalityMouseLeave={handleMunicipalityMouseLeave}
+                        setShowOptions={setShowOptions}
+                        showOptions={showOptions}
+                        getMunicipalityColor={getMunicipalityColor}
+                    />
+                );
+            case "rizal":
+                return (
+                    <Rizal
+                        handleMouseMove={handleMouseMove}
+                        handleMunicipalityClick={handleMunicipalityClick}
+                        handleMunicipalityMouseEnter={handleMunicipalityMouseEnter}
+                        handleMunicipalityMouseLeave={handleMunicipalityMouseLeave}
+                        setShowOptions={setShowOptions}
+                        showOptions={showOptions}
+                        getMunicipalityColor={getMunicipalityColor}
+                    />
+                );
+            case "cebu":
+                return (
+                    <Cebu
                         handleMouseMove={handleMouseMove}
                         handleMunicipalityClick={handleMunicipalityClick}
                         handleMunicipalityMouseEnter={handleMunicipalityMouseEnter}

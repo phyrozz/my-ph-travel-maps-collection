@@ -33,6 +33,14 @@ const router = createBrowserRouter([
     element: <App map="bulacan" />,
   },
   {
+    path: "maps/rizal",
+    element: <App map="rizal" />,
+  },
+  {
+    path: "maps/cebu",
+    element: <App map="cebu" />,
+  },
+  {
     path: "maps/etivac",
     element: <App map="etivac" />,
   }

@@ -23,7 +23,6 @@ const Cavite = (props) => {
         <rect id="bg" className="map-bg" width="2400" height="2400" />
         <polygon
             id="Ternate"
-            data-name="San Pedro"
             className="municipality-layer"
             points="353.81 1302.91 494.55 1422.98 744.81 1209.41 814.25 1209.41 880.29 1135.08 822.44 1074.82 692.13 1185.89 598.04 1073.93 353.81 1302.91"
             onClick={handleMunicipalityClick}

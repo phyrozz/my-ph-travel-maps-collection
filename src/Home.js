@@ -26,6 +26,14 @@ const Home = () => {
         let path = "/maps/bulacan";
         navigate(path);
     }
+    const rizalMap = () => {
+        let path = "/maps/rizal";
+        navigate(path);
+    }
+    const cebuMap = () => {
+        let path = "/maps/cebu";
+        navigate(path);
+    }
 
     return (
         <div className="home-container">
@@ -37,9 +45,11 @@ const Home = () => {
                 <button className="btn" onClick={lagunaMap}>Laguna</button>
                 <button className="btn" onClick={caviteMap}>Cavite</button>
                 <button className="btn" onClick={bulacanMap}>Bulacan</button>
+                <button className="btn" onClick={rizalMap}>Rizal</button>
+                <button className="btn" onClick={cebuMap}>Cebu</button>
                 <button className="btn etivac" onClick={etivacMap}>Etivac ;)</button>
-                <p>More maps coming soon!</p>
             </div>
+            <p>More maps coming soon!</p>
         </div>
     );
 }
